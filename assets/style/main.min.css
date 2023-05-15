@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-separator: #ececec;
+  --color-primary: #7700bb;
+  --font-family: sans-serif;
+  --font-size: 16px;
+}
+
+[class*="--flex"] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class*="--grid"] {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-white);
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+
+.section-filter__inner {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar-filter {
+  padding: 16px;
+  border-radius: 50px;
+  background-color: var(--color-black);
+  margin-bottom: 50px;
+}
+.navbar-filter__list {
+  gap: 24px;
+}
+.list-card__item {
+  grid-column: 3 span;
+}
+.list-card__article {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--color-separator);
+  padding: 10px;
+  background-color: transparent;
+  transition: background 200ms ease-in, transform 200ms linear;
+}
+.list-card__article:hover {
+  background-color: var(--color-primary);
+  transform: scale(1.1);
+}
+.list-card__article-img {
+  width: 100%;
+  height: 280px;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.list-card__article-detail {
+  padding-top: 30px;
+}
+.list-card__article-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.list-card__article-descr {
+  font-weight: 600;
+  opacity: 0.7;
+  text-align: left;
+  margin-bottom: 12px;
+}
+.list-card__article-span {
+  text-align: right;
+  display: block;
+}/*# sourceMappingURL=main.min.css.map */
